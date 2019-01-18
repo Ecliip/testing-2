@@ -15,6 +15,7 @@ body {
 .container {
   display: grid;
   grid-template-columns: [full-start] 1fr [center-start] repeat(8, [col-start] minmax(min-content, 12.5rem) [col-end]) [center-end] 1fr [full-end];
+  grid-template-rows: 100vh;
   row-gap: 1rem; }
 
 .heading-1 {
@@ -48,7 +49,8 @@ body {
   column-gap: 1rem;
   justify-content: space-between;
   justify-items: center;
-  align-items: center; }
+  align-items: center;
+  padding: 0 6rem; }
   .heading-spans__titles--element {
     display: block;
     border-left: .5rem solid #fff;
@@ -58,25 +60,19 @@ body {
     text-align: center; }
 
 .header {
-  grid-column: center-start / center-end; }
-  .header__secondary {
-    grid-column: full-start / full-end;
-    grid-row: 2 / 3; }
+  grid-column: full-start / full-end;
+  grid-row: 1 / 2;
+  display: grid; }
 
 .header-secondary {
-  grid-column: full-start / full-end;
   background-color: #000;
-  padding: 0 6rem;
   justify-content: space-between;
   row-gap: 1rem; }
 
-.header-tertiary {
-  grid-column: full-start / full-end; }
-  .header-tertiary__date {
-    padding: 2rem; }
+.header-tertiary__date {
+  padding: 2rem; }
 
 .header-shows {
-  grid-column: full-start / full-end;
   padding: 0 6rem; }
   .header-shows__artists {
     padding: 2rem; }
