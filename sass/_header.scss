@@ -1,35 +1,27 @@
 .header {
     grid-column: full-start / full-end;
     grid-row: 1 / 2;
+
     display: grid;
+    grid-template-columns: 1fr minmax(min-content, 80vw) 1fr;
+    align-content: space-evenly;
 
     &__primary {
-
+        grid-column: 2 / 3;
     }
-
     &__secondary {
-
+        grid-column: 1 / -1;
     }
-}
-
-.header-secondary {
-
-    background-color: #000;
-    justify-content: space-between;
-    row-gap: 1rem;
-    
-}
-
-.header-tertiary {
-
-    &__date {
-        padding: $padding-small
+    &__tertiary {
+        grid-column: 1 / -1;
+        padding: 1rem;
     }
+
+    &__shows {
+        grid-column: 1 / -1;
+    }
+
 }
 
-.header-shows {
-    padding: 0 6rem;
-    &__artists {
-        padding: $padding-small
-    }
-}
+
+

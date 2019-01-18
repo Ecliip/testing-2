@@ -62,17 +62,18 @@ body {
 .header {
   grid-column: full-start / full-end;
   grid-row: 1 / 2;
-  display: grid; }
+  display: grid;
+  grid-template-columns: 1fr minmax(min-content, 80vw) 1fr;
+  align-content: space-evenly; }
+  .header__primary {
+    grid-column: 2 / 3; }
+  .header__secondary {
+    grid-column: 1 / -1; }
+  .header__tertiary {
+    grid-column: 1 / -1;
+    padding: 1rem; }
+  .header__shows {
+    grid-column: 1 / -1; }
 
-.header-secondary {
-  background-color: #000;
-  justify-content: space-between;
-  row-gap: 1rem; }
-
-.header-tertiary__date {
-  padding: 2rem; }
-
-.header-shows {
-  padding: 0 6rem; }
-  .header-shows__artists {
-    padding: 2rem; }
+nav {
+  list-style: none; }
