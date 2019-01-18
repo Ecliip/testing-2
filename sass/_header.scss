@@ -1,0 +1,61 @@
+.header {
+        grid-column: center-start / center-end;
+
+    
+   
+
+
+    &__secondary {
+        grid-column: full-start / full-end;
+        grid-row: 2 / 3;
+
+    }
+}
+
+.header-secondary {
+    grid-column: full-start / full-end;
+    background-color: #000;
+    padding: 0 6rem;
+    justify-content: space-between;
+    row-gap: 1rem;
+
+    // &__titles {
+    //     display: grid;
+    //     grid-template-columns: repeat(3,  max-content); 
+    //     column-gap: 1rem;
+    //     justify-content: space-between;
+    //     justify-items: center;
+        
+    //     align-items: center; 
+
+        
+    //     &--element {
+    //         display: block;
+
+    //         border-left: .5rem solid #fff;
+    //         border-right: .5rem solid #fff;
+    //         padding: $padding-small;
+    //         display: flex;
+    //         text-align: center;
+
+            
+    //     }
+    // }
+
+    
+}
+
+.header-tertiary {
+    grid-column: full-start / full-end;
+    &__date {
+        padding: $padding-small
+    }
+}
+
+.header-shows {
+    grid-column: full-start / full-end;
+    padding: 0 6rem;
+    &__artists {
+        padding: $padding-small
+    }
+}

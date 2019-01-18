@@ -1,0 +1,28 @@
+.black-element {
+    background-color: #000;
+    border: .5rem solid #fff;
+}
+
+
+.heading-spans {
+    &__titles {
+        display: grid;
+        grid-template-columns: repeat(3,  max-content); 
+        column-gap: 1rem;
+        justify-content: space-between;
+        justify-items: center;
+        align-items: center; 
+
+        
+        &--element {
+            display: block;
+            border-left: .5rem solid #fff;
+            border-right: .5rem solid #fff;
+            padding: $padding-small;
+            display: flex;
+            text-align: center;
+
+            
+        }
+    }
+}

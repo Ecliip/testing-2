@@ -8,3 +8,75 @@
 html {
   box-sizing: border-box;
   font-size: 62.5%; }
+
+body {
+  font-family: "Arimo", sans-serif; }
+
+.container {
+  display: grid;
+  grid-template-columns: [full-start] 1fr [center-start] repeat(8, [col-start] minmax(min-content, 12.5rem) [col-end]) [center-end] 1fr [full-end];
+  row-gap: 1rem; }
+
+.heading-1 {
+  font-size: 20rem;
+  font-weight: 700;
+  color: #fff;
+  text-transform: uppercase; }
+
+.heading-2 {
+  font-size: 5rem;
+  font-weight: 700;
+  color: #fff;
+  text-transform: uppercase; }
+
+.heading-3 {
+  font-size: 3.5rem;
+  font-weight: 700;
+  color: #fff;
+  text-transform: uppercase; }
+
+.txt-center {
+  text-align: center; }
+
+.black-element {
+  background-color: #000;
+  border: .5rem solid #fff; }
+
+.heading-spans__titles {
+  display: grid;
+  grid-template-columns: repeat(3, max-content);
+  column-gap: 1rem;
+  justify-content: space-between;
+  justify-items: center;
+  align-items: center; }
+  .heading-spans__titles--element {
+    display: block;
+    border-left: .5rem solid #fff;
+    border-right: .5rem solid #fff;
+    padding: 2rem;
+    display: flex;
+    text-align: center; }
+
+.header {
+  grid-column: center-start / center-end; }
+  .header__secondary {
+    grid-column: full-start / full-end;
+    grid-row: 2 / 3; }
+
+.header-secondary {
+  grid-column: full-start / full-end;
+  background-color: #000;
+  padding: 0 6rem;
+  justify-content: space-between;
+  row-gap: 1rem; }
+
+.header-tertiary {
+  grid-column: full-start / full-end; }
+  .header-tertiary__date {
+    padding: 2rem; }
+
+.header-shows {
+  grid-column: full-start / full-end;
+  padding: 0 6rem; }
+  .header-shows__artists {
+    padding: 2rem; }

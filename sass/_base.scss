@@ -1,3 +1,8 @@
+$font-arimo: 'Arimo', sans-serif;
+$font-staat: 'Staatliches', cursive;
+
+$padding-small: 2rem;
+
 *,
 *::before,
 *::after {
@@ -12,5 +17,14 @@ html {
 }
 
 body {
-    
+    font-family: $font-arimo;
+
+}
+
+.container {
+    display: grid;
+    grid-template-columns: [full-start] 1fr 
+                            [center-start] repeat(8, [col-start] minmax(min-content, 12.5rem) [col-end])
+                             [center-end] 1fr [full-end];
+    row-gap: 1rem;
 }
