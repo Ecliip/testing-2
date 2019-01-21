@@ -15,26 +15,43 @@ body {
 .container {
   display: grid;
   grid-template-columns: [full-start] 1fr [center-start] repeat(8, [col-start] minmax(min-content, 12.5rem) [col-end]) [center-end] 1fr [full-end];
-  grid-template-rows: 100vh;
-  row-gap: 1rem; }
+  grid-template-rows: min-content minmax(min-content, 90vh) 100vh;
+  row-gap: 1rem;
+  align-content: start;
+  justify-content: center; }
 
 .heading-1 {
-  font-size: 20rem;
+  font-size: 18rem;
   font-weight: 700;
   color: #fff;
   text-transform: uppercase; }
 
 .heading-2 {
-  font-size: 5rem;
+  font-size: 4rem;
   font-weight: 700;
-  color: #fff;
   text-transform: uppercase; }
+  .heading-2--white {
+    color: #fff; }
+  .heading-2--black {
+    color: #000; }
+
+.heading-2-second {
+  font-family: "Staatliches", cursive;
+  font-size: 5rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: .5rem;
+  color: white; }
 
 .heading-3 {
   font-size: 3.5rem;
   font-weight: 700;
   color: #fff;
   text-transform: uppercase; }
+
+.paragraph {
+  font-size: 2.8rem;
+  line-height: 1.4; }
 
 .txt-center {
   text-align: center; }
@@ -61,7 +78,6 @@ body {
 
 .header {
   grid-column: full-start / full-end;
-  grid-row: 1 / 2;
   display: grid;
   grid-template-columns: 1fr minmax(min-content, 80vw) 1fr;
   align-content: space-evenly; }
@@ -75,5 +91,72 @@ body {
   .header__shows {
     grid-column: 1 / -1; }
 
-nav {
-  list-style: none; }
+.nav {
+  grid-column: full-start / full-end;
+  border-bottom: 1px solid #000; }
+  .nav__list {
+    font-family: "Staatliches", cursive;
+    font-size: 2.5rem;
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+    align-items: center; }
+  .nav__item {
+    padding: 1rem; }
+  .nav__link:link, .nav__link:visited {
+    text-decoration: none;
+    color: #000; }
+
+.shows {
+  grid-column: center-start / center-end;
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  grid-template-rows: 1fr repeat(7, 5vw) 1fr;
+  grid-gap: .5rem; }
+  .shows__text {
+    grid-column: 1 / 4;
+    grid-row: 2 / 9;
+    padding: 0 4rem;
+    background-color: #000;
+    color: white; }
+  .shows__item--1 {
+    grid-row: 2 / 6;
+    grid-column: 4 / 7; }
+  .shows__item--2 {
+    visibility: hidden;
+    grid-row: 3 / 6;
+    grid-column: 4 / 6; }
+  .shows__item--3 {
+    grid-row: 6 / 9;
+    grid-column: 4 / 7; }
+  .shows__img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    display: block; }
+  .shows__schedule {
+    grid-column: 7 / 9;
+    grid-row: 2 / 9;
+    background-color: black;
+    display: grid;
+    grid-template-columns: 1fr repeat(2, max-content) 1fr;
+    align-content: space-evenly; }
+  .shows__list--days {
+    font-size: 2rem;
+    color: #fff;
+    font-family: "Staatliches", cursive;
+    text-transform: uppercase;
+    list-style: none;
+    grid-column: 2 / 3;
+    padding-right: 1rem; }
+    .shows__list--days > * {
+      padding: .3rem 0; }
+  .shows__list--artists {
+    font-size: 2rem;
+    color: #fff;
+    font-family: "Staatliches", cursive;
+    text-transform: uppercase;
+    list-style: none;
+    grid-column: 3 / 4; }
+    .shows__list--artists > * {
+      padding: .3rem 0; }

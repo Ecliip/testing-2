@@ -1,6 +1,6 @@
 .header {
     grid-column: full-start / full-end;
-    grid-row: 1 / 2;
+
 
     display: grid;
     grid-template-columns: 1fr minmax(min-content, 80vw) 1fr;
