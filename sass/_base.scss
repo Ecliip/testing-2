@@ -26,7 +26,7 @@ body {
     grid-template-columns: [full-start] 1fr 
                             [center-start] repeat(8, [col-start] minmax(min-content, 12.5rem) [col-end])
                              [center-end] 1fr [full-end];
-    grid-template-rows: min-content minmax(min-content, 90vh) 100vh;
+    grid-template-rows: min-content minmax(min-content, 90vh) 100vh min-content;
     row-gap: 1rem;
     align-content: start;
     justify-content: center;

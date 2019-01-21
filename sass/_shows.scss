@@ -1,5 +1,6 @@
 .shows {
     grid-column: center-start / center-end;
+    // grid-row: 3 / 4;
     display: grid;
     grid-template-columns: repeat(8, 1fr);
     grid-template-rows: 1fr repeat(7, 5vw) 1fr;
