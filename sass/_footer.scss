@@ -1,0 +1,21 @@
+.footer {
+    grid-column: full-start / full-end;
+   
+    display: grid;
+    grid-template-rows: repeat(2, min-content);
+    grid-row-gap: 2rem;
+
+
+
+    &__nav {
+        grid-row: 1 / 2;
+        border-top: 1px solid #000;
+        border-bottom: 1px solid #000;
+    }
+
+    &__copy {
+        grid-row: 2 / 3;
+        justify-self: center;
+        padding: 3rem;
+    }
+}

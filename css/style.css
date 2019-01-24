@@ -15,7 +15,7 @@ body {
 .container {
   display: grid;
   grid-template-columns: [full-start] 1fr [center-start] repeat(8, [col-start] minmax(min-content, 12.5rem) [col-end]) [center-end] 1fr [full-end];
-  grid-template-rows: min-content minmax(min-content, 90vh) 100vh min-content;
+  grid-template-rows: min-content minmax(min-content, 90vh) 100vh min-content min-content 80vh;
   row-gap: 1rem;
   align-content: start;
   justify-content: center; }
@@ -88,6 +88,21 @@ body {
   height: 100%;
   display: block; }
 
+.nav__list {
+  font-family: "Staatliches", cursive;
+  font-size: 2.5rem;
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+  align-items: center; }
+
+.nav__item {
+  padding: 1rem; }
+
+.nav__link:link, .nav__link:visited {
+  text-decoration: none;
+  color: #000; }
+
 .header {
   grid-column: full-start / full-end;
   display: grid;
@@ -103,21 +118,23 @@ body {
   .header__shows {
     grid-column: 1 / -1; }
 
-.nav {
+.footer {
+  grid-column: full-start / full-end;
+  display: grid;
+  grid-template-rows: repeat(2, min-content);
+  grid-row-gap: 2rem; }
+  .footer__nav {
+    grid-row: 1 / 2;
+    border-top: 1px solid #000;
+    border-bottom: 1px solid #000; }
+  .footer__copy {
+    grid-row: 2 / 3;
+    justify-self: center;
+    padding: 3rem; }
+
+.nav__header {
   grid-column: full-start / full-end;
   border-bottom: 1px solid #000; }
-  .nav__list {
-    font-family: "Staatliches", cursive;
-    font-size: 2.5rem;
-    list-style: none;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
-    align-items: center; }
-  .nav__item {
-    padding: 1rem; }
-  .nav__link:link, .nav__link:visited {
-    text-decoration: none;
-    color: #000; }
 
 .shows {
   grid-column: center-start / center-end;
@@ -174,7 +191,8 @@ body {
   grid-template-columns: repeat(8, 1fr);
   grid-template-rows: repeat(2, min-content);
   padding: 0 2rem;
-  align-items: center; }
+  align-items: center;
+  margin-bottom: 2rem; }
   .location__direction {
     grid-row: 2 / 3;
     grid-column: 1 / 4;
@@ -234,3 +252,14 @@ body {
   .gallery__item--12 {
     grid-column: 2 / 3;
     grid-row: 5 / 6; }
+
+.contact {
+  grid-column: col-start 2 / col-start 8; }
+  .contact__form {
+    width: 100%;
+    height: 60%;
+    padding: 0 3rem;
+    border: 15px solid #000;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; }

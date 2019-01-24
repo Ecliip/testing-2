@@ -5,6 +5,7 @@
     grid-template-rows: repeat(2, min-content);
     padding: 0 2rem;
     align-items: center;
+    margin-bottom: 2rem;
     
     &__direction {
         grid-row: 2 / 3;
