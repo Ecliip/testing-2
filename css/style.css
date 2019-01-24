@@ -56,6 +56,12 @@ body {
 .txt-center {
   text-align: center; }
 
+.txt-black {
+  color: black !important; }
+
+.mb-med {
+  margin-bottom: 4rem !important; }
+
 .black-element {
   background-color: #000;
   border: .5rem solid #fff; }
@@ -75,6 +81,12 @@ body {
     padding: 2rem;
     display: flex;
     text-align: center; }
+
+.gallery__img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  display: block; }
 
 .header {
   grid-column: full-start / full-end;
@@ -129,11 +141,6 @@ body {
   .shows__item--3 {
     grid-row: 6 / 9;
     grid-column: 4 / 7; }
-  .shows__img {
-    object-fit: cover;
-    width: 100%;
-    height: 100%;
-    display: block; }
   .shows__schedule {
     grid-column: 7 / 9;
     grid-row: 2 / 9;
@@ -162,4 +169,23 @@ body {
       padding: .3rem 0; }
 
 .location {
-  grid-column: full-start / full-end; }
+  grid-column: full-start / full-end;
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  grid-template-rows: repeat(2, min-content);
+  padding: 0 2rem;
+  align-items: center; }
+  .location__direction {
+    grid-row: 2 / 3;
+    grid-column: 1 / 4;
+    padding: 0 4rem; }
+  .location__heading {
+    grid-column: 4 / 8; }
+  .location__map {
+    grid-column: 4 / 8;
+    padding-bottom: 56.25%;
+    overflow: hidden;
+    height: 0; }
+    .location__mapiframe {
+      height: 100%;
+      width: 100%; }

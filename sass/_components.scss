@@ -3,7 +3,7 @@
     border: .5rem solid #fff;
 }
 
-
+//heading elelment
 .heading-spans {
     &__titles {
         display: grid;
@@ -26,4 +26,15 @@
             
         }
     }
+}
+
+//Gallery-photo
+
+
+
+.gallery__img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    display: block;
 }
