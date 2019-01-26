@@ -13,6 +13,10 @@
         justify-items: center;
         align-items: center; 
         position: relative;
+
+        @media only screen and (max-width: $small) {
+            grid-template-columns: 1fr;
+        } 
         // padding: 0 6rem;
         
         &::before {
@@ -24,6 +28,9 @@
             display: block;
             width: 2px;
             height: 100%;
+            @media only screen and (max-width: $small) {
+                left: 20%;
+            }
         }
 
         &::after {
@@ -35,13 +42,23 @@
             display: block;
             width: 2px;
             height: 100%;
+
+            @media only screen and (max-width: $small) {
+                right: 20%;
+            }
         }
 
         
         &--element {
             display: block;
-            padding: $padding-small;
-            position: relative;    
+            padding: 2rem;
+            position: relative; 
+            
+            @media only screen and (max-width: $small) {
+                padding: .2rem 0;
+                } 
+           
+            
         }
     }
 }

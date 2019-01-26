@@ -1,7 +1,6 @@
 $font-arimo: 'Arimo', sans-serif;
 $font-staat: 'Staatliches', cursive;
 
-$padding-small: 2rem;
 
 $largest: 78.75em; //1260
 $large: 62.5em; //1000px
@@ -36,7 +35,7 @@ body {
     grid-template-columns: [full-start] 1fr 
                             [center-start] repeat(8, [col-start] minmax(min-content, 12.5rem) [col-end])
                              [center-end] 1fr [full-end];
-    grid-template-rows: min-content minmax(min-content, 90vh) 100vh min-content min-content 80vh;
+    grid-template-rows: min-content minmax(min-content, 90vh) 100vh min-content min-content;
     row-gap: 1rem;
     align-content: start;
     justify-content: center;
@@ -46,6 +45,6 @@ body {
     }
 
     @media only screen and (max-width: $small) {
-        grid-template-rows: 100vh 100vh min-content min-content 80vh;
+        grid-template-rows: 100vh 100vh min-content min-content;
     }
 }
