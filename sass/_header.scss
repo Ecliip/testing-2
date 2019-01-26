@@ -7,6 +7,11 @@
     grid-template-columns: 1fr minmax(min-content, 80vw) 1fr;
     align-content: space-evenly;
 
+
+    @media only screen and (max-width: $largest) {
+        align-content: stretch;
+    }
+
     &__primary {
         grid-column: 2 / 3;
     }
@@ -15,12 +20,15 @@
     }
     &__tertiary {
         grid-column: 1 / -1;
-        padding: 1rem;
+        display: grid;
+        align-items: center;
+        // padding: 1rem;
     }
 
-    &__shows {
-        grid-column: 1 / -1;
-    }
+    // &__shows {
+    //     grid-column: 1 / -1;
+
+    // }
 
 }
 

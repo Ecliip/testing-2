@@ -5,6 +5,7 @@ $padding-small: 2rem;
 
 $largest: 78.75em; //1260
 $large: 62.5em; //1000px
+$medium: 55.312em; // 850px
 
 *,
 *::before,
@@ -38,4 +39,8 @@ body {
     row-gap: 1rem;
     align-content: start;
     justify-content: center;
+
+    @media only screen and (max-width: $medium) {
+        row-gap: 0;
+    }
 }
