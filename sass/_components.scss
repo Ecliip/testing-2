@@ -40,31 +40,8 @@
         
         &--element {
             display: block;
-            // border-left: .5rem solid #fff;
-            // border-right: .5rem solid #fff;
             padding: $padding-small;
-            // display: flex;
-            // text-align: center;
-            position: relative;
-
-            
-
-            // &:not(:last-of-type) {
-            //     &::before {
-            //         content: "";
-            //         position: absolute;
-            //         top: 0;
-            //         right: calc(100% / 3 - 50%);
-            //         background-color: #fff;
-            //         display: block;
-            //         width: 2px;
-            //         height: 100%;
-            //     }
-            
-    
-        // }
-
-       
+            position: relative;    
         }
     }
 }
@@ -141,4 +118,7 @@
         z-index: 100;
     }
     
+    @media only screen and (max-width: $small) {
+       visibility: hidden;
+    }
 }

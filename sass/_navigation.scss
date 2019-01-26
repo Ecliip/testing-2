@@ -3,6 +3,10 @@
         grid-column: full-start / full-end;
         border-bottom: 1px solid #000;
     }
+
+    @media only screen and (max-width: $small) {
+        visibility: hidden;
+    }
    
     
 }

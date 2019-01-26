@@ -12,6 +12,11 @@
         align-content: stretch;
     }
 
+    @media only screen and (max-width: $small) {
+        grid-row: 1 / 2;
+    }
+
+
     &__primary {
         grid-column: 2 / 3;
     }
