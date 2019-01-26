@@ -6,6 +6,7 @@ $largest: 78.75em; //1260
 $large: 62.5em; //1000px
 $medium: 55.312em; // 850px
 $small: 40.625em; //650px
+$smallest: 31.25em; //650px
 
 *,
 *::before,
@@ -20,6 +21,9 @@ html {
     font-size: 62.5%;
     @media only screen and (max-width: $largest) {
         font-size: 50%;
+    }
+    @media only screen and (max-width: $smallest) {
+        font-size: 37.5%;
     }
         
     }
@@ -47,4 +51,8 @@ body {
     @media only screen and (max-width: $small) {
         grid-template-rows: 100vh 100vh min-content min-content;
     }
+
+    @media only screen and (max-width: $smallest) {
+        grid-template-rows: 100vh 60vh min-content min-content;
+        }
 }

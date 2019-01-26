@@ -3,12 +3,12 @@
     // grid-row: 3 / 4;
     display: grid;
     grid-template-columns: repeat(8, 1fr);
-    grid-template-rows: 1fr repeat(7, 5vw) 1fr;
+    grid-template-rows: 1fr min-content 1fr;
     grid-gap: .5rem;
     
-    @media only screen and (max-width: $largest) {
-        grid-template-rows: 1fr min-content 1fr;
-    }
+    // @media only screen and (max-width: $largest) {
+    //     grid-template-rows: 1fr min-content 1fr;
+    // }
     
     @media only screen and (max-width: $large) {
         grid-gap: 0;
@@ -22,6 +22,9 @@
         margin-top: 3rem;
         z-index: 10;
         margin: 3rem 0;
+        grid-row: 1 / 2;
+        grid-column: 7 / 9;
+
 
         @media only screen and (max-width: $large) {
             grid-row: 1 / 2;
@@ -33,11 +36,15 @@
             grid-row: 1 / 2;
             margin-top: 0;
             }
+
+        @media only screen and (max-width: $smallest) {
+            margin-top: 1rem;
+            }
     }
 
     &__text {
+        grid-row: 1 / -1;
         grid-column: 1 / 4;
-        grid-row: 2 / 9;
         padding: 4rem;
         background-color: #000;
         color: white;
@@ -57,7 +64,7 @@
 
     &__item{
         &--1 {
-            grid-row: 2 / 6;
+            grid-row: 1 / -1;
             grid-column: 4 / 7;
             @media only screen and (max-width: $largest) {
                 grid-row: 2 / 3;
@@ -94,7 +101,7 @@
 
     &__schedule {
         grid-column: 7 / 9;
-        grid-row: 2 / 9;
+        grid-row: 1 / -1;
         background-color: rgba(#000, 1);
         display: grid;
         grid-template-columns: 1fr repeat(2, max-content) 1fr;
@@ -108,7 +115,6 @@
         }
         @media only screen and (max-width: $small) {
             grid-column: 1 / 4;
-
         }
 
         
@@ -126,6 +132,10 @@
        
         & > * {
             padding: 1.2rem 0;
+
+            @media only screen and (max-width: $smallest) {
+                padding: .3rem 0;
+                }
         }
     }
 
@@ -140,6 +150,10 @@
 
         & > * {
             padding: 1.2rem 0;
+
+            @media only screen and (max-width: $smallest) {
+                padding: .3rem 0;
+                }
         }
     }
 
