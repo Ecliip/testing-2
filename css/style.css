@@ -8,6 +8,9 @@
 html {
   box-sizing: border-box;
   font-size: 62.5%; }
+  @media only screen and (max-width: 78.75em) {
+    html {
+      font-size: 50%; } }
 
 body {
   font-family: "Arimo", sans-serif; }
@@ -52,6 +55,9 @@ body {
 .paragraph {
   font-size: 2.8rem;
   line-height: 1.4; }
+  @media only screen and (max-width: 62.5em) {
+    .paragraph {
+      font-size: 1.8rem; } }
 
 .txt-center {
   text-align: center; }
@@ -113,7 +119,7 @@ body {
   position: absolute;
   transition: width .2s,  height .4s .2s; }
 
-.nav__item:hover::before:active {
+.nav__item:hover::before, .nav__item:active::before {
   width: 100%;
   height: 100%; }
 
@@ -169,22 +175,32 @@ body {
   grid-template-columns: repeat(8, 1fr);
   grid-template-rows: 1fr repeat(7, 5vw) 1fr;
   grid-gap: .5rem; }
+  @media only screen and (max-width: 78.75em) {
+    .shows {
+      grid-template-rows: 1fr min-content 1fr; } }
   .shows__text {
     grid-column: 1 / 4;
     grid-row: 2 / 9;
-    padding: 0 4rem;
+    padding: 4rem;
     background-color: #000;
     color: white; }
+    @media only screen and (max-width: 78.75em) {
+      .shows__text {
+        grid-row: 2 / 3; } }
+    @media only screen and (max-width: 62.5em) {
+      .shows__text {
+        grid-column: 1 / 3;
+        grid-row: 1 / -1; } }
   .shows__item--1 {
     grid-row: 2 / 6;
     grid-column: 4 / 7; }
-  .shows__item--2 {
-    visibility: hidden;
-    grid-row: 3 / 6;
-    grid-column: 4 / 6; }
-  .shows__item--3 {
-    grid-row: 6 / 9;
-    grid-column: 4 / 7; }
+    @media only screen and (max-width: 78.75em) {
+      .shows__item--1 {
+        grid-row: 2 / 3; } }
+    @media only screen and (max-width: 62.5em) {
+      .shows__item--1 {
+        grid-row: 1 / -1;
+        grid-column: 3 / 7; } }
   .shows__schedule {
     grid-column: 7 / 9;
     grid-row: 2 / 9;
@@ -192,6 +208,12 @@ body {
     display: grid;
     grid-template-columns: 1fr repeat(2, max-content) 1fr;
     align-content: space-evenly; }
+    @media only screen and (max-width: 78.75em) {
+      .shows__schedule {
+        grid-row: 2 / 3; } }
+    @media only screen and (max-width: 62.5em) {
+      .shows__schedule {
+        grid-row: 1 / -1; } }
   .shows__list--days {
     font-size: 2rem;
     color: #fff;
@@ -224,13 +246,24 @@ body {
     grid-row: 2 / 3;
     grid-column: 1 / 4;
     padding: 0 4rem; }
+    @media only screen and (max-width: 62.5em) {
+      .location__direction {
+        margin-top: 4rem;
+        grid-row: 3 / 4;
+        grid-column: 2 / 8; } }
   .location__heading {
     grid-column: 4 / 8; }
+    @media only screen and (max-width: 62.5em) {
+      .location__heading {
+        grid-column: 1 / -1; } }
   .location__map {
     grid-column: 4 / 8;
     padding-bottom: 56.25%;
     overflow: hidden;
     height: 0; }
+    @media only screen and (max-width: 62.5em) {
+      .location__map {
+        grid-column: 2 / 8; } }
     .location__mapiframe {
       height: 100%;
       width: 100%; }

@@ -3,6 +3,9 @@ $font-staat: 'Staatliches', cursive;
 
 $padding-small: 2rem;
 
+$largest: 78.75em; //1260
+$large: 62.5em; //1000px
+
 *,
 *::before,
 *::after {
@@ -14,7 +17,12 @@ $padding-small: 2rem;
 html {
     box-sizing: border-box;
     font-size: 62.5%;
-}
+    @media only screen and (max-width: $largest) {
+        font-size: 50%;
+    }
+        
+    }
+
 
 body {
     font-family: $font-arimo;
