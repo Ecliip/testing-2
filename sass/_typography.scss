@@ -10,6 +10,10 @@
         font-size: 14rem;
     }
 
+    @media only screen and (max-width: $tiny) {
+        font-size: 12rem;
+    }
+
 }
 
 .heading-2 {
@@ -39,6 +43,10 @@
     text-transform: uppercase;  
     letter-spacing: .5rem;
     color: white;
+
+    @media only screen and (max-width: $tiny) {
+        font-size: 3rem;
+    }
 }
 
 .heading-3 {

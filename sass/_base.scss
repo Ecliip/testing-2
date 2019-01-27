@@ -7,6 +7,7 @@ $large: 62.5em; //1000px
 $medium: 55.312em; // 850px
 $small: 40.625em; //650px
 $smallest: 31.25em; //650px
+$tiny: 22.5em; //360px
 
 *,
 *::before,
@@ -39,7 +40,7 @@ body {
     grid-template-columns: [full-start] 1fr 
                             [center-start] repeat(8, [col-start] minmax(min-content, 12.5rem) [col-end])
                              [center-end] 1fr [full-end];
-    grid-template-rows: min-content minmax(min-content, 90vh) 100vh min-content min-content;
+    grid-template-rows: min-content minmax(min-content, 90vh) minmax(min-content, 100vh)  min-content min-content;
     row-gap: 1rem;
     align-content: start;
     justify-content: center;
@@ -49,10 +50,10 @@ body {
     }
 
     @media only screen and (max-width: $small) {
-        grid-template-rows: 100vh 100vh min-content min-content;
+        grid-template-rows: 100vh 100vh;
     }
 
     @media only screen and (max-width: $smallest) {
-        grid-template-rows: 100vh 60vh min-content min-content;
+        grid-template-rows: 100vh 60vh;
         }
 }

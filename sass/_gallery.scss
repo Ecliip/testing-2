@@ -5,6 +5,9 @@
     grid-template-columns: repeat(8, 1fr);
     grid-gap: .5rem;
 
+    @media only screen and (max-width: $small) {
+        grid-row: 4 / 5;
+    }
     &__heading {
         grid-column: 1 / -1;
     }
