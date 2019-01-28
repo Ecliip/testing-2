@@ -42,8 +42,8 @@
     }
 
     &__text {
-        grid-row: 1 / -1;
-        grid-column: 1 / 4;
+        grid-row: 4 / 5;
+        grid-column: 1 / -1;
         padding: 4rem;
         background-color: #000;
         color: white;
@@ -62,7 +62,7 @@
     &__item{
         &--1 {
             grid-row: 1 / -1;
-            grid-column: 4 / 7;
+            grid-column: 1 / 7;
 
 
             @media only screen and (max-width: $large) {
