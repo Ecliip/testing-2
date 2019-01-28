@@ -50,10 +50,10 @@ body {
     }
 
     @media only screen and (max-width: $small) {
-        grid-template-rows: 100vh 100vh;
+        grid-template-rows: 100vh 100vh 100vh;
     }
 
     @media only screen and (max-width: $smallest) {
-        grid-template-rows: 100vh 60vh;
+        grid-template-rows: 100vh 60vh 100vh;
         }
 }

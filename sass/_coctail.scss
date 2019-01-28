@@ -7,6 +7,17 @@
     display: grid;
     justify-content: center;
 
+
+    @media only screen and (max-width: $small) {
+        grid-row: 3 / 4;
+        clip-path: polygon(0 22.22%, 22.22% 0, 78.88% 0, 100% 22.22%, 100% 85%, 50% 100%, 0 85%);
+    }
+
+    @media only screen and (max-width: $tiny) {
+      align-content: end;  
+    }
+ 
+
     &__text{
         margin-top: 5rem;
         background-image: linear-gradient(to left, rgba(#000, .75), rgba(#000, .75) 100%);
@@ -19,5 +30,11 @@
         text-transform: uppercase;
         display: grid;
         align-content: center;
+
+        @media only screen and (max-width: $tiny) {
+        margin-bottom: 10rem;
+        }
+
+
     }
 }
