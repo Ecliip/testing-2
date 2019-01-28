@@ -1,0 +1,23 @@
+.coctail {
+    grid-column: center-start / center-end;
+    background-image: url(../img/coctail.jpg);
+    background-position: center;
+    background-size: cover;
+    clip-path: polygon(0 33.33%, 33.33% 0, 66.66% 0, 100% 33.33%,  100% 85%, 50% 100%, 0 85%);
+    display: grid;
+    justify-content: center;
+
+    &__text{
+        margin-top: 5rem;
+        background-image: linear-gradient(to left, rgba(#000, .75), rgba(#000, .75) 100%);
+        border-radius: 50%;
+        height: 30rem;
+        width: 30rem;
+        color: white;
+        font-size: 3rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        display: grid;
+        align-content: center;
+    }
+}

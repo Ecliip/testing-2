@@ -15,7 +15,7 @@
     
     &__direction {
         grid-row: 2 / 3;
-        grid-column: 1 / 4;
+        grid-column: 2 / 4;
         padding: 0 4rem;
 
         @media only screen and (max-width: $large) {
@@ -29,7 +29,7 @@
     }
 
     &__heading {
-        grid-column: 4 / 8;
+        grid-column: 1 / -1;
 
         @media only screen and (max-width: $large) {
             grid-column: 1 / -1;
