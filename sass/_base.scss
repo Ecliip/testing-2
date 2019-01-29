@@ -44,10 +44,11 @@ body {
     row-gap: 1rem;
     align-content: start;
     justify-content: center;
+    // line-height: 0;
 
-    @media only screen and (max-width: $medium) {
-        row-gap: 0;
-    }
+    // @media only screen and (max-width: $medium) {
+    //     row-gap: 0;
+    // }
 
     @media only screen and (max-width: $small) {
         grid-template-rows: 100vh 100vh 100vh;

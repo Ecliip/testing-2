@@ -7,16 +7,14 @@
         clip-path: polygon(0 33.33%, 33.33% 0, 66.66% 0, 100% 33.33%,  100% 85%, 50% 100%, 0 85%);
         display: grid;
         justify-content: center;
+        align-content: end;
 
 
         @media only screen and (max-width: $small) {
             grid-row: 3 / 4;
             clip-path: polygon(0 22.22%, 22.22% 0, 78.88% 0, 100% 22.22%, 100% 85%, 50% 100%, 0 85%);
         }
-    
-        @media only screen and (max-width: $tiny) {
-          align-content: end;  
-        }
+
 
         &__text{
             margin-top: 5rem;
@@ -30,9 +28,7 @@
             text-transform: uppercase;
             display: grid;
             align-content: center;
-    
-            @media only screen and (max-width: $tiny) {
             margin-bottom: 10rem;
-            }
+    
     }
 }

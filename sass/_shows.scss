@@ -33,11 +33,14 @@
         @media only screen and (max-width: $small) {
             grid-column: 1 / 4;
             grid-row: 1 / 2;
-            margin-top: 0;
+            margin-top: 1rem;
             }
 
         @media only screen and (max-width: $smallest) {
-            margin-top: 1rem;
+            margin-top: 2rem;
+            }
+        @media only screen and (max-width: $tiny) {
+            grid-column: 1 / 5;
             }
     }
 
@@ -91,6 +94,9 @@
         }
         @media only screen and (max-width: $small) {
             grid-column: 1 / 4;
+        }
+        @media only screen and (max-width: $tiny) {
+            grid-column: 1 / 5;
         }
 
         
